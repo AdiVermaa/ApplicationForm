@@ -1,0 +1,81 @@
+.form-group input[type="date"] {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  background: white;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.form-group input[type="date"]::before {
+  content: '📅';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.form-group textarea[name="responsibilities"] {
+  min-height: 150px;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.form-group textarea[name="responsibilities"]::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.form-group textarea[name="responsibilities"]:focus::placeholder {
+  opacity: 0.4;
+}
+
+/* Character count indicator */
+.form-group textarea[name="responsibilities"] + .char-count {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 0.8em;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.form-group textarea[name="responsibilities"].limit-near + .char-count {
+  color: #ffc107;
+}
+
+.form-group textarea[name="responsibilities"].limit-reached + .char-count {
+  color: #dc3545;
+}
+
+/* Current/Previous job indicator */
+.current-job-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.current-job-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.current-job-checkbox:hover {
+  color: #4a90e2;
+} 
