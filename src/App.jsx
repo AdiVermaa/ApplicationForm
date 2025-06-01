@@ -833,13 +833,29 @@ function App() {
               <h4>Additional Information</h4>
               <p><strong>Salary Expectation:</strong> {formData.salaryExpectation}</p>
               <p><strong>Preferred Location:</strong> {formData.preferredLocation}</p>
-              <p><strong>Notice Period:</strong> {formData.noticePeriod}</p>
+              <p><strong>Notice Period:</strong> {formData.noticePeriod} days</p>
               <p><strong>Current Employment:</strong> {formData.currentEmployment}</p>
               <p><strong>Languages:</strong> {formData.languages.join(', ')}</p>
               <p><strong>Available for Interview:</strong> {formData.availableForInterview}</p>
               <p><strong>Portfolio URL:</strong> {formData.portfolioUrl}</p>
               <p><strong>LinkedIn URL:</strong> {formData.linkedinUrl}</p>
               <p><strong>GitHub URL:</strong> {formData.githubUrl}</p>
+            </div>
+            <div className="form-footer review-footer">
+              <button 
+                type="button" 
+                onClick={() => setCurrentStep(1)} 
+                className="edit-button"
+              >
+                Edit Details
+              </button>
+              <button 
+                type="submit" 
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+              </button>
             </div>
           </div>
         )

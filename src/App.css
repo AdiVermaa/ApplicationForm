@@ -1062,24 +1062,133 @@ body.dark-mode {
 }
 
 body.dark-mode .form-container {
-  background: rgba(30, 30, 30, 0.8);
+  background: rgba(30, 30, 30, 0.95);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .form-section {
-  background: rgba(40, 40, 40, 0.6);
+  background: rgba(40, 40, 40, 0.95);
+  color: #e2e8f0;
 }
 
 body.dark-mode input,
-body.dark-mode textarea {
-  background: rgba(50, 50, 50, 0.8);
-  color: #ffffff;
-  border-color: #444;
+body.dark-mode textarea,
+body.dark-mode .ql-editor {
+  background: rgba(50, 50, 50, 0.95);
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #718096;
+}
+
+body.dark-mode label {
+  color: #e2e8f0;
 }
 
 body.dark-mode .skill-checkbox,
 body.dark-mode .language-checkbox {
-  background: rgba(50, 50, 50, 0.8);
+  color: #e2e8f0;
+  background: rgba(50, 50, 50, 0.95);
+}
+
+body.dark-mode .skill-checkbox:hover,
+body.dark-mode .language-checkbox:hover {
+  background: rgba(60, 60, 60, 0.95);
+}
+
+body.dark-mode .file-upload-area {
+  background: rgba(50, 50, 50, 0.95);
+  border-color: #4a5568;
+}
+
+body.dark-mode .file-types {
+  color: #a0aec0;
+}
+
+body.dark-mode .review-section {
+  background: rgba(40, 40, 40, 0.95);
+  color: #e2e8f0;
+}
+
+body.dark-mode .review-item {
+  border-color: #4a5568;
+}
+
+body.dark-mode .review-item h4 {
+  color: #e2e8f0;
+}
+
+body.dark-mode .skill-tag {
+  background: rgba(60, 60, 60, 0.95);
+  color: #e2e8f0;
+}
+
+body.dark-mode .steps-progress {
+  background: rgba(40, 40, 40, 0.95);
+}
+
+body.dark-mode .step {
+  background: rgba(50, 50, 50, 0.95);
+}
+
+body.dark-mode .step-number {
+  background: rgba(60, 60, 60, 0.95);
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+body.dark-mode .step-title {
+  color: #e2e8f0;
+}
+
+body.dark-mode .theme-toggle {
+  background: rgba(50, 50, 50, 0.95);
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Edit button styles */
+.edit-button {
+  background: linear-gradient(to right, #3182ce, #2c5282);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 16px;
+  box-shadow: 0 4px 6px rgba(49, 130, 206, 0.2);
+}
+
+.edit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(49, 130, 206, 0.3);
+  background: linear-gradient(to right, #2c5282, #2a4365);
+}
+
+.edit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(49, 130, 206, 0.2);
+}
+
+body.dark-mode .edit-button {
+  background: linear-gradient(to right, #4299e1, #3182ce);
+}
+
+body.dark-mode .edit-button:hover {
+  background: linear-gradient(to right, #3182ce, #2b6cb0);
+}
+
+/* Fix form footer in dark mode */
+body.dark-mode .form-footer {
+  background: rgba(40, 40, 40, 0.95);
+  border-top: 1px solid #4a5568;
+  padding-top: 24px;
 }
 
 /* Theme toggle button */
